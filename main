@@ -1,0 +1,16 @@
+x=input().split()
+y=0
+if '1' in x:
+    y+=1
+for i in x:
+    i=int(i)
+    if i%2==0:
+        while True:
+            i=i/2
+            if i==1:
+                y+=1
+            if i%2!=0:
+                break
+            
+            
+print(y)
