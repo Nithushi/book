@@ -1,0 +1,21 @@
+n=int(input())
+m=0
+s=set(str(n))
+s=list(s)
+s.sort()
+while True:
+    if n%8==0:
+        print('Yes',end='')
+        break
+    else:
+        for i in s:
+            t=list(str(n))
+            t.remove(i)
+            t=int(''.join(t))
+            if t%8==0 and t!=0:
+                print('yes m=',t)
+                break
+            elif i==s[-1] :
+                print('no')
+        break
+            
