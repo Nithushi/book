@@ -1,0 +1,9 @@
+def MyPow(x, n):
+  if n==0:
+    return 1
+  hp = MyPow(x, n//2)
+  ret = hp*hp
+  if n%2==1 :
+    ret = ret * x
+  return ret
+print(MyPow(2,7))
