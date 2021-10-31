@@ -1,0 +1,23 @@
+lis=input().split()
+n=len(lis)-4
+
+ou=[]
+t=0
+for i in range(n):
+    up=0
+    do=0
+    lis1=lis[0+t:5+t]
+    for j in range(4):
+        if lis1[j]<lis1[j+1]:
+            up+=1
+        elif lis1[j]>lis1[j+1]:
+            do+=1
+    if up==4:
+        ou.append('upward')
+    elif do==4:
+        ou.append('downward')
+    else:
+        ou.append('unpredictable')
+    t+=1
+k=','.join(ou)
+print(k)
